@@ -5,8 +5,12 @@ function Addplayer(){
     
     //guardo en una variable el valor de el input
     var persona=document.getElementById("texbox").value;
-    
-    //agrego el valor del input a un array
+
+
+    //agrego el valor del input a un 
+    // persona = persona.replace(/(\r\n\t|\n|\r\t)/gm,"");
+
+    var persona=persona.split("\n");
     participantes.push(persona);
     console.log(participantes);
 
@@ -26,8 +30,8 @@ function Addplayer(){
     //limpio el input
     document.getElementById("texbox").value=''
 
-    
-    
+    document.location.href=sorteo.html;
+    window.location.href=sorteo.html; 
    
      
 
