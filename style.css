@@ -97,9 +97,6 @@ header img{
     box-shadow: rgba(0,0,0,0.1)0 0 10px;
     margin-bottom: 10px;
     background-color: #fff;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:1fr;
     
 
 }
@@ -124,4 +121,10 @@ header img{
     height: 40px;
     background-color: violet;
 
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
