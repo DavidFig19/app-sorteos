@@ -30,11 +30,13 @@ function Addplayer(){
     //limpio el input
     document.getElementById("texbox").value=''
 
-    document.location.href=sorteo.html;
-    window.location.href=sorteo.html; 
-   
+  
      
+    participantes.map((eliminado)=>{
 
+        return console.log("participa"+eliminado);
+    })
+    
 
   
 
@@ -43,21 +45,20 @@ function Addplayer(){
 
 
 
+// function Sortear(){
+//     var Indice=participantes.length();
 
-function Sortear(){
-    var Indice=participantes.length();
+//     var Random=Math.floor(Math.random()*Indice)+1;
+//     console.log(Random);
+//     participantes.map((item)=>{
 
-    var Random=Math.floor(Math.random()*Indice)+1;
-    console.log(Random);
-    participantes.map((item)=>{
-
-        item
-    })
-
+//         item
+//     })
 
 
 
-}
+
+// }
 
 
 // function Addplayer(){

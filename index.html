@@ -8,16 +8,42 @@
     <script src="logic.js"></script>
 </head>
 <body>
-    <section class="titulo">
-        <h1>RIFAS</h1>
-    </section>
+    <header>
+        <img src="assets/trebol.png" alt="trebol">
+        REALIZA UN SORTEO
+        <img src="assets/trebol.png" alt="trebol">
+    </header>
 
-    <section class="container">
-        <div >
-            <textarea type="text" class="card-textarea" placeholder="introduce el nombre"  id="texbox"></textarea>
-            <button class="boton" onclick="Addplayer()">COMENZAR</button>
-        </div>
-    </section>
+    <div class="MainContainer">
+            <section class="TableIn">
+                <textarea type="text" class="TextIn" placeholder="introduce el nombre"  id="texbox"></textarea>
+                <button class="ButonIn" onclick="Addplayer()">COMENZAR</button>
+            </section>
+
+
+            <section class="TableOut"> 
+              
+               <div class="TablePeople">
+                <div class="Title"><p>PARTICIPANTES</p></div>
+
+               </div>
+                <button class="ButonOut" onclick="Deleteplayer()">SORTEAR</button>
+
+            </section>
+
+    </div>
     
 </body>
 </html>
+
+
+<!-- <section class="titulo">
+    <h1>RIFAS</h1>
+</section>
+
+<section class="container">
+    <div >
+        <textarea type="text" class="card-textarea" placeholder="introduce el nombre"  id="texbox"></textarea>
+        <button class="boton" onclick="Addplayer()">COMENZAR</button>
+    </div>
+</section> -->

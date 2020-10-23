@@ -1,129 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 body{
-
-    margin: 0px;
     padding: 0px;
-    height: 100vh;
-    /* background: linear-gradient(90deg,#00c4cc,#7d2ae8); */
+    margin: 0px;
+    font-family: 'Fredoka One', cursive;
 }
+header{
 
-.titulo{
-    display:  flex;
-    justify-content: center;
-    align-content: center;
-   
-   
-}
-
-
-
-.container{
-
-    display:  flex;
-    justify-content: center;
-    align-items: center;
+    background-color:#8CEBF0;
     width: 100%;
-
-}
-
-
-div{
-    width: 350px;
-    height: 450px;
-    background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
-    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
-    display:  flex;
-    flex-direction: column;
-    justify-content: center;
+    height:70px;
+    display:flex;
+    justify-content: space-around;
     align-items: center;
-    border-radius:20px;
-    
-   
+    font-size:50px;
+    color:#fff;
+
+
 }
 
-div .card-textarea{
-    width: 300px;
-    height: 350px;
-    border-radius:4px;
-    outline: none;
-    border-style: none;
+header img{
+    width: 70px;
+    height:70px;
+}
+
+.MainContainer{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: space-around;
     
 }
-.cardTable{
+
+.TableIn{
     width: 350px;
-    height: 400px;
-    background: #f5f5f5;
-    box-shadow: 0 10px 20px rgba(0,0,0,.3);
-    overflow: hidden;
-    border-radius: 5px;
-    padding: 25px;
-    text-align: center;
-    z-index: 2;
-    display:  flex;
-
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    overflow-y: scroll;
-    margin-left: 10px;
-}
-
-.texbox{
-    outline: none;
-    border-style:solid #1028c1;
-    width: 300px;
-    height: 30px;
-    
-}
-
-
-.boton{
-
-    background-color: #fe4264;
-    color: white;
-    margin-top: 20px;
-    cursor: pointer;
-    font-weight: 900;
-    font-size: 20px;
-    outline: none;
-    border-style: none;
-    border-radius:10px;
-    width: 300px;
-    height: 30px;
-
-}
-
-
-.circulo {
-    width: 500px;
     height: 500px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #5cb85c;
+    background-color: #73B9D9;
+    margin-top: 60px;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+
+}
+.TextIn{
+    font-family: 'Fredoka One', cursive;
+    width: 290px;
+    height:400px;
+    font-size: 20px;
+    border-style: none;
+    outline: none;
+    box-shadow: rgba(0,0,0,0.1)0 0 10px;
+    margin-bottom: 10px;;
+
 }
 
-.cuarto {
-    position: absolute;
-   
-    float:left;
-    background-color:yellow;
+.ButonIn{
+
+    outline: none;
+    border-style: none;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    background-color:#8644e2;
+    cursor: pointer;
+    border-radius: 10px;
+    
 }
 
-.tabla{
+.ButonIn:hover{
+    background-color:#6a15e2 ;
+}
+
+.TableOut{
+    width: 350px;
+    height: 500px;
+    background-color: #73B9D9;
+    margin-top: 60px;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+}
+.TablePeople{
+    font-family: 'Fredoka One', cursive;
+    width: 290px;
+    height:400px;
+    font-size: 20px;
+    border-style: none;
+    outline: none;
+    box-shadow: rgba(0,0,0,0.1)0 0 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr;
+    
+
+}
+.ButonOut{
+    outline: none;
+    border-style: none;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    background-color:#e22d2d;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.Title{
+    display: flex;
+    justify-content:center;
+    align-items: center;
     width: 100%;
-   border: 1px solid #000;
-   margin-top: 5px;
- 
-   
- 
+    height: 40px;
+    background-color: violet;
+
 }
-th, td {
-    width: 25%;
-   text-align: left;
-   vertical-align: top;
-   border: 1px solid #000;
-   border-collapse: collapse;
-   padding: 0.3em;
-   caption-side: bottom;
-   
- }
