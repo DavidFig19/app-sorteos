@@ -1,4 +1,4 @@
-var participantes=[{nombre:""}];
+var participantes=[];
 
 var item;
 function Addplayer(){
@@ -18,16 +18,22 @@ function Addplayer(){
 
       
     
+        // var ul = document.getElementById("list");
+        // var li = document.createElement("li");
+      
+        //     li.appendChild(document.createTextNode(persona));
+        //     li.setAttribute("id", "list"); // added line
+        //     ul.appendChild(li);
+           
         var ul = document.getElementById("list");
         var li = document.createElement("li");
       
-        participantes.forEach(element => {
-            li.appendChild(document.createTextNode(element.nombre));
+            li.appendChild(document.createTextNode(persona));
             li.setAttribute("id", "list"); // added line
             ul.appendChild(li);
            
             
-        });
+      
        
   
      
