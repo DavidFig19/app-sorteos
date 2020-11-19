@@ -1,5 +1,6 @@
 var participantes=[];
-
+var sonido=new Audio();
+sonido.src="../assets/sonido.mp3";
 var item;
 function Addplayer(){
 
