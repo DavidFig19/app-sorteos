@@ -10,7 +10,17 @@ body{
   flex-direction: column;
   align-items: center;
 }
-
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.header p{
+    padding: 1px;
+    margin: 0px;
+}
 body p{
     font-size: 50px;
 }
@@ -58,3 +68,19 @@ body p{
 
    
 }
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 20px;
+    width: 100%;
+}
+.wrapper div{
+ align-self: center;
+ justify-self: center;
+}
+/* 
+canvas{
+    height: 400;
+    width: 400;
+} */

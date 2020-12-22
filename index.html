@@ -6,23 +6,79 @@
     <title>TOMBOLA</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/logic.js"></script>
-    <script src="./js/jquery-3.5.1.min.js"></script>
+    <!-- <script src="./js/jquery-3.5.1.min.js"></script> -->
+    <script src="./js/Winwheel.min.js"></script>
+    <script src="./js/TweenMax.js"></script>
 </head>
 <body>
     
 
+  <section class="header">
     <p>Sorteos</p>
+    <button>Girar</button>
+  </section>
 
+ <section class="wrapper">
   <div class="card">
     <img src="./assets/sorteo.png" alt="trofeo imagen">
     <textarea class="textin">  </textarea>
-    <button onmousedown="sonido.play()">Agregar</button>
+    <button onmousedown="sonido.play()" onclick="miRUleta.startAnimation();">Agregar</button>
   </div>
-            
+  
+  <div>
+    <canvas id="canvas" width="400" height="400" >
+
+    </canvas>
+  </div>
+ </section>
 
 
            
-    
+    <script>
+      var miRUleta=new Winwheel({
+        'numSegments':5,
+        'outerRadius':170,
+        'segments':[
+          {'fillStyle':'#f1c40f','text':'js'},
+          {'fillStyle':'#f1c40f','text':'js'},
+          {'fillStyle':'#f1c40f','text':'js'},
+          {'fillStyle':'#f1c40f','text':'js'},
+          {'fillStyle':'#f1c40f','text':'js'}
+        ],
+        'animation':{
+          "type":"spinToStop",
+          "duration":5,
+          "callbackFinished":"Mensaje()",
+          "callbackAfter":"dibujarIndicador()"
+        }
+
+
+      });
+      function Mensaje(){
+        var SegmentoSeleccionado=miRUleta.getIndicatedSegment();
+        alert("elemento seleccionado"+SecmentoSeleccionado.text+ "!");
+        //reinicio de la ruleta (valor inicial)
+        miRUleta.stopAnimation(false);
+        miRUleta.rotationAngle=0;
+        miRUleta.draw();
+        dibujarIndicador();
+
+      }
+      dibujarIndicador();
+      function dibujarIndicador(){
+        var ctx=miRUleta.ctx;
+        ctx.strokeStyle="navy";
+        ctx.fillStyle="black";
+        ctx.lineWidth=2;
+        ctx.beginPath();
+        ctx.moveTo(170,0);
+        ctx.lineTo(230,0);
+        ctx.lineTo(200,40);
+        ctx.lineTo(171,0);
+        ctx.stroke();
+        ctx.fill();
+      }
+    </script>
     
 </body>
 </html>
