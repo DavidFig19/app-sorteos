@@ -14,7 +14,7 @@ var contenedor;
 var contener;
  var participantes=[];//array para la tabla
 var sonido=new Audio();
-sonido.src="../assets/sonido.mp3"; //variable que hace el sonido del clik
+var sonido.src="../assets/sonido.mp3"; //variable que hace el sonido del clik
 var item;
 
 //funcion para el sonido del clik
