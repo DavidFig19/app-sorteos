@@ -2,7 +2,9 @@
 var participantes = [];
 
 var sonido = new Audio();
+var sonidoGana= new Audio();
 sonido.src = "../assets/mouse.mp3"; //variable que hace el sonido del clik
+sonidoGana.src="../assets/win.mp3";//sonido de victoria
 //funcion para el sonido del clik
 function Click() {
   sonido.pause();
@@ -10,11 +12,22 @@ function Click() {
   sonido.play();
 }
 
-function Addplayer() {
-  // guardo en una variable el valor de el input
-  var persona = document.getElementById("persona").value;
-  console.log(persona);
+function Win(){
+  sonidoGana.pause();
+  sonidoGana.currentTime=0;
+  sonidoGana.play();
+}
 
+function Addplayer() {
+
+  if(document.getElementById("persona").value==""){
+    alertify.error("Escribe algo");
+  }else{
+    // guardo en una variable el valor de el input
+  var persona = document.getElementById("persona").value;
+
+
+  console.log(persona);
   var personas = persona.split("\n");
   console.log("personas" + personas);
   /// agrego el valor del input a un
@@ -36,7 +49,7 @@ function Addplayer() {
     // const ID= moonLanding.getTime()+moonLanding.getMilliseconds()
     // console.log(ID)
     participantes.push({
-      nombre: item,
+      nombre: item.toUpperCase(),
       id: uuid,
     });
 
@@ -44,6 +57,9 @@ function Addplayer() {
   });
   Click();
   CreateTable(participantes);
+  }
+
+  
 }
 
 function CreateTable(array) {
@@ -85,14 +101,14 @@ function DeletePlayer() {
   console.log("maximo" + maximo);
   //creamos una constante random en base al maximo y minimo
   const elejido = Math.floor(Math.random() * (maximo - 0));
-
+  Win();//sonido de victoria
   //mensaje del ganador
   alertify
     .alert()
     .setting({
-      title: "Felicidades!!",
+      title: "🏆🎉 Felicidades 🎉🏆",
       label: "entendido",
-      message: `Ganador: ${participantes[elejido].nombre}`,
+      message: `Ganador:  ${participantes[elejido].nombre}   🥳`,
       // 'onok': function(){ alertify.success(`felicidades ${participantes[elejido].nombre}`);}
     })
     .show();
@@ -111,6 +127,7 @@ function DeletePlayer() {
 
   //eliminamos del arreglo el participante elejido
   participantes.splice(elejido, 1);
+  Click();
 }
 const boton_agregar = document.getElementById("agregar");
 console.log(boton_agregar);
