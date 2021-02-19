@@ -8,7 +8,9 @@
     <!--boostrap-->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    
+    <!--alertify-->
+    <link rel="stylesheet" href="./css/alertify.css">
+    <link rel="stylesheet" href="./css/default.css">
 </head>
 <body>
   <!-- As a heading -->
@@ -29,10 +31,6 @@
           <div class="card-body">
             
               <textarea name="" id="persona" cols="30" rows="6" class="form-control mb-4" >
-                equipo1
-                equipo2
-                equipo3
-                equipo4
               </textarea>
 
 
@@ -50,7 +48,7 @@
             <th>NOMBRE</th>
             <th>ID</th>
             <th>
-              <button type="button" class="btn btn-warning">Sortear</button>
+              <button id="sortear" type="button" class="btn btn-warning">Sortear</button>
             </th>
            </tr>
           </thead>
@@ -69,6 +67,7 @@
 
   <script defer type="text/javascript"  src="./js/main.js"></script>
   <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/alertify.js"></script>
 </body>
 </html>
 
